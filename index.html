@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Packit.ai – Smart AR-Powered Moving</title>
-    <meta name="description" content="Packit.ai uses AR/VR to scan, inventory, and optimize your residential move. Plan smarter. Pack faster." />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Packit.ai – Smart AR-Powered Moving</title>
+        <meta name="description" content="Packit.ai uses AR/VR to scan, inventory, and optimize your residential move. Plan smarter. Pack faster." />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+        <style>
+          .demo-card:hover {
+            transform: perspective(1000px) rotateX(1deg) rotateY(-2deg) scale(1.02);
+          }
+          .tooltip {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(30, 41, 59, 0.95);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 10;
+          }
+          .demo-hotspot:hover + .tooltip {
+            display: block;
+          }
+        </style>
+      </head>
+      
   <body class="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-gray-100 font-sans">
     <!-- Hero -->
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
@@ -42,14 +66,23 @@
       </div>
     </section>
 
-    <!-- Visual Demo -->
-    <section class="py-16 px-6 bg-gray-900 text-center">
-      <h2 class="text-2xl font-bold mb-6 text-white">Visualize Your Move</h2>
-      <div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-gray-700">
-        <img src="./demo.jpg" alt="AR App Demo" class="w-full" />
-      </div>
-      <p class="text-gray-400 text-sm mt-4">Preview of our AR scanning interface</p>
-    </section>
+    <!-- Interactive Demo -->
+<section class="py-20 px-6 bg-gray-900 text-center">
+    <h2 class="text-2xl font-bold mb-6 text-white" data-aos="fade-up">Experience It in Action</h2>
+    <div
+      class="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-gray-700 transition-transform demo-card"
+      data-aos="zoom-in"
+    >
+      <img src="./demo.jpg" alt="AR App Demo" class="w-full" />
+      <div
+        class="absolute demo-hotspot top-[30%] left-[50%] w-6 h-6 bg-blue-500 rounded-full cursor-pointer animate-pulse"
+        title="Click to explore"
+      ></div>
+      <div class="tooltip">Bookshelf detected – 35 cubic ft</div>
+    </div>
+    <p class="text-gray-400 text-sm mt-4" data-aos="fade-in">Live 3D scanning demo coming soon</p>
+  </section>
+  
 
     <!-- Feature Highlights -->
     <section class="py-20 px-6 bg-gray-950">
@@ -93,5 +126,12 @@
     <footer class="text-center py-6 text-gray-500 text-sm bg-gray-950 border-t border-gray-700">
       © <script>document.write(new Date().getFullYear())</script> Packit.ai — All rights reserved.
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
   </body>
 </html>
