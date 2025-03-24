@@ -4,125 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Packit.ai – AR-Powered Moving Assistant</title>
-  <meta name="description" content="Use Packit.ai to scan, inventory, and optimize your move with AR/VR and AI. Smart packing, smarter moving." />
+  <title>Packit.ai – Smart AR-Powered Moving</title>
+  <meta name="description" content="Scan your home with AR, create a smart inventory, and plan your move efficiently with Packit.ai." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      background: linear-gradient(145deg, #0f172a, #1e293b);
+      font-family: system-ui, sans-serif;
+      background-color: #f8fafc;
     }
-
-    .demo-card:hover {
-      transform: perspective(1000px) rotateX(1deg) rotateY(-2deg) scale(1.02);
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161c4586d');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-
-    .tooltip {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(30, 41, 59, 0.95);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-size: 0.875rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      display: none;
-      z-index: 10;
-    }
-
-    .demo-hotspot:hover + .tooltip {
-      display: block;
-    }
-
-    .camera-ui {
-      position: absolute;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(15, 23, 42, 0.8);
-      border-radius: 1rem;
-      padding: 0.5rem 1.5rem;
-      color: white;
-      font-size: 0.875rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
 
-<body class="text-gray-100 font-sans">
-  <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <div class="max-w-3xl" data-aos="fade-down">
-      <h1 class="text-5xl font-extrabold mb-6 leading-tight text-white">
-        Move Smarter with <span class="text-blue-400">AR/VR-Powered Inventory</span>
-      </h1>
-      <p class="text-xl text-gray-300 mb-8">
-        Scan your home, auto-inventory your items, and get packing and transport suggestions powered by AI.
-      </p>
-      <a href="#early-access" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg">
-        Join the Beta
-      </a>
+<body class="text-gray-800">
+  <!-- Hero Section -->
+  <header class="hero relative h-screen flex items-center justify-center text-white">
+    <div class="overlay absolute inset-0"></div>
+    <div class="relative z-10 text-center px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Move Smarter with Packit.ai</h1>
+      <p class="text-lg md:text-xl mb-6 max-w-xl mx-auto">Scan your home using AR/VR, generate a real-time inventory, and get personalized moving recommendations — fast, accurate, and stress-free.</p>
+      <a href="#quote" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded shadow">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">What Packit.ai Offers</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <img src="https://img.icons8.com/external-flat-juicy-fish/64/000000/external-ar-technology-flat-flat-juicy-fish.png" class="mx-auto mb-4" alt="Scan with AR">
+          <h3 class="font-semibold text-xl mb-2">AR/VR Home Scanning</h3>
+          <p>Use your smartphone to map your home and belongings using AR technology in minutes.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://img.icons8.com/external-smashingstocks-flat-smashing-stocks/64/000000/inventory.png" class="mx-auto mb-4" alt="Inventory">
+          <h3 class="font-semibold text-xl mb-2">Auto Inventory Generator</h3>
+          <p>Automatically detect and organize your items into a move-ready inventory with volume estimates.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://img.icons8.com/external-smashingstocks-flat-smashing-stocks/64/000000/plan.png" class="mx-auto mb-4" alt="Planning">
+          <h3 class="font-semibold text-xl mb-2">Smart Move Planning</h3>
+          <p>We suggest the right-sized vehicle, packing method, and storage solution tailored to your inventory.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section class="py-20 px-6 text-center" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-12 text-white">How It Works</h2>
-    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
-      <div class="rounded-xl shadow-xl p-6 bg-slate-800 border border-slate-700 hover:scale-105 transition">
-        <h3 class="text-xl font-semibold mb-2 text-blue-300">📱 Scan Your Home</h3>
-        <p class="text-gray-300">Use your phone to AR-scan rooms and objects — furniture, boxes, everything.</p>
-      </div>
-      <div class="rounded-xl shadow-xl p-6 bg-slate-800 border border-slate-700 hover:scale-105 transition">
-        <h3 class="text-xl font-semibold mb-2 text-blue-300">🧠 Auto Inventory</h3>
-        <p class="text-gray-300">Our AI builds a real-time list of what you're moving, including size and category.</p>
-      </div>
-      <div class="rounded-xl shadow-xl p-6 bg-slate-800 border border-slate-700 hover:scale-105 transition">
-        <h3 class="text-xl font-semibold mb-2 text-blue-300">🚛 Smart Planning</h3>
-        <p class="text-gray-300">We recommend the right truck or storage, optimized for your actual volume.</p>
-      </div>
+  <!-- Quote Form -->
+  <section id="quote" class="py-16 bg-gray-100">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Get Your Personalized Moving Plan</h2>
+      <form name="quote-form" method="POST" data-netlify="true" class="grid gap-4">
+        <input type="text" name="name" placeholder="Your Name" required class="border border-gray-300 p-3 rounded" />
+        <input type="email" name="email" placeholder="Email Address" required class="border border-gray-300 p-3 rounded" />
+        <input type="text" name="location" placeholder="Current Location" required class="border border-gray-300 p-3 rounded" />
+        <input type="text" name="destination" placeholder="Destination" required class="border border-gray-300 p-3 rounded" />
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded">Submit</button>
+      </form>
     </div>
-  </section>
-
-  <!-- AR Video Demo -->
-  <section class="py-20 px-6 bg-gray-900 text-center">
-    <h2 class="text-2xl font-bold mb-6 text-white" data-aos="fade-up">Live AR Demo Preview</h2>
-    <div class="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-gray-700 transition-transform demo-card" data-aos="zoom-in">
-      <video autoplay muted loop playsinline class="w-full">
-        <source src="./packit-demo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="camera-ui">Scan active: 4 objects detected</div>
-    </div>
-    <p class="text-gray-400 text-sm mt-4">This is a real screen recording of Packit.ai in action</p>
-  </section>
-
-  <!-- Early Access Form -->
-  <section id="early-access" class="py-20 px-6 bg-gray-800 text-center" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-4 text-white">Get Early Access</h2>
-    <p class="text-gray-400 mb-8 max-w-xl mx-auto">
-      Be the first to try Packit.ai — get notified when our AR scanner goes live.
-    </p>
-    <form name="early-access" method="POST" data-netlify="true" class="max-w-md mx-auto space-y-4">
-      <input type="hidden" name="form-name" value="early-access" />
-      <input type="email" name="email" placeholder="you@example.com" required class="w-full border border-gray-600 px-4 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
-        Get Early Access
-      </button>
-    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500 text-sm bg-gray-950 border-t border-gray-700">
-    © <script>document.write(new Date().getFullYear())</script> Packit.ai — All rights reserved.
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Packit.ai. All rights reserved.</p>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-  </script>
 </body>
 
 </html>
