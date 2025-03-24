@@ -1,87 +1,98 @@
-import React from "react";
-
-export default function PackitLandingPage() {
-  return (
-    <div className="bg-white text-gray-900 font-sans">
-      {/* Hero */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Move Smarter with <span className="text-blue-400">Packit.ai</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Snap photos of your stuff — we'll auto-generate an inventory, packing plan, and moving checklist using AI.
-          </p>
-          <a
-            href="#early-access"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition"
-          >
-            Get Early Access
-          </a>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 px-6 bg-white text-center">
-        <h2 className="text-3xl font-semibold mb-12">How It Works</h2>
-        <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto text-left">
-          <div className="rounded-xl shadow p-6 border border-gray-100">
-            <h3 className="text-xl font-bold mb-2">📸 Snap Photos</h3>
-            <p className="text-gray-600">Use your phone to take pictures of rooms and items. No need to write lists.</p>
-          </div>
-          <div className="rounded-xl shadow p-6 border border-gray-100">
-            <h3 className="text-xl font-bold mb-2">🧠 AI Inventory</h3>
-            <p className="text-gray-600">Packit.ai detects, categorizes, and counts everything you need to move.</p>
-          </div>
-          <div className="rounded-xl shadow p-6 border border-gray-100">
-            <h3 className="text-xl font-bold mb-2">📦 Smart Packing Plan</h3>
-            <p className="text-gray-600">Get a personalized packing and moving plan — optimized for time, space, and sanity.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Visual Mockup */}
-      <section className="py-16 px-6 bg-gray-100 text-center">
-        <h2 className="text-2xl font-semibold mb-8">See It In Action</h2>
-        <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
-          <img
-            src="https://placehold.co/800x450?text=Packit.ai+Camera+Mockup"
-            alt="App demo mockup"
-            className="w-full"
-          />
-        </div>
-        <p className="text-gray-500 text-sm mt-4">Mockup shown for illustrative purposes</p>
-      </section>
-
-      {/* Early Access Signup */}
-      <section
-        id="early-access"
-        className="py-20 px-6 bg-white text-center"
-      >
-        <h2 className="text-3xl font-semibold mb-4">Get Early Access</h2>
-        <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-          Be one of the first to try Packit.ai and simplify your next move. We'll reach out when the beta is live.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packit.ai – Smart Moving with AR/VR</title>
+    <meta
+      name="description"
+      content="Packit.ai helps you inventory and optimize your move using your phone and AR/VR. Plan smarter, pack faster, and move efficiently."
+    />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+          Move Smarter with <span class="text-blue-400">AR/VR-Powered Inventory</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8">
+          Packit.ai uses spatial scanning and AI to inventory your home, optimize your packing, and match you with the right-sized moving truck or storage unit.
         </p>
-        <form className="max-w-md mx-auto space-y-4">
-          <input
-            type="email"
-            placeholder="Email address"
-            className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
-          >
-            Join the Waitlist
-          </button>
-        </form>
-      </section>
+        <a href="#early-access" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition">
+          Join the Beta
+        </a>
+      </div>
+    </section>
 
-      {/* Footer */}
-      <footer className="text-center py-8 text-gray-400 text-sm bg-gray-50">
-        © {new Date().getFullYear()} Packit.ai. All rights reserved.
-      </footer>
-    </div>
-  );
-}
+    <!-- How It Works -->
+    <section class="py-20 px-6 bg-white text-center">
+      <h2 class="text-3xl font-bold mb-12">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
+        <div class="rounded-xl shadow-md p-6 border">
+          <h3 class="text-xl font-semibold mb-2">📱 Scan Your Home</h3>
+          <p class="text-gray-600">Use your phone's camera and AR to map out rooms and objects — no measuring tape needed.</p>
+        </div>
+        <div class="rounded-xl shadow-md p-6 border">
+          <h3 class="text-xl font-semibold mb-2">🧠 Auto Inventory & Categorization</h3>
+          <p class="text-gray-600">Our AI detects furniture, boxes, and quantities to build a full itemized inventory in minutes.</p>
+        </div>
+        <div class="rounded-xl shadow-md p-6 border">
+          <h3 class="text-xl font-semibold mb-2">🚚 Smart Move Planning</h3>
+          <p class="text-gray-600">Get vehicle sizing, packing suggestions, and even route optimization based on your space and stuff.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Visual -->
+    <section class="py-16 px-6 bg-gray-100 text-center">
+      <h2 class="text-2xl font-bold mb-6">Experience the Future of Moving</h2>
+      <div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-300">
+        <img src="https://placehold.co/800x450?text=AR+Home+Scan+Demo" alt="Demo visual placeholder" class="w-full" />
+      </div>
+      <p class="text-gray-500 text-sm mt-4">Real AR/VR interface demo coming soon</p>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-12">What Makes Packit.ai Unique</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+          <div class="p-6 border rounded-xl shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">🧭 Spatial Intelligence</h3>
+            <p class="text-gray-600">3D scanning + depth sensing to truly understand your home's layout and volume.</p>
+          </div>
+          <div class="p-6 border rounded-xl shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">📦 Optimized Packing Plans</h3>
+            <p class="text-gray-600">Smart box stacking, item grouping, and truck utilization suggestions.</p>
+          </div>
+          <div class="p-6 border rounded-xl shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">🔗 Vendor Integrations</h3>
+            <p class="text-gray-600">Book movers, trucks, or storage directly with our trusted partners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Early Access -->
+    <section id="early-access" class="py-20 px-6 bg-gray-100 text-center">
+      <h2 class="text-3xl font-bold mb-4">Join the Beta</h2>
+      <p class="text-gray-600 mb-8 max-w-xl mx-auto">
+        Be among the first to revolutionize your move. We’ll email you when Packit.ai is ready to scan your space.
+      </p>
+      <form class="max-w-md mx-auto space-y-4" name="early-access" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="early-access" />
+        <input type="email" name="email" placeholder="Your email" class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+          Get Early Access
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-400 text-sm bg-white border-t">
+      © <script>document.write(new Date().getFullYear())</script> Packit.ai — All rights reserved.
+    </footer>
+  </body>
+</html>
